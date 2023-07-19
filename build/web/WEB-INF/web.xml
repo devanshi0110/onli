@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Add_candidate</servlet-name>
+        <servlet-class>Online_Election_System.Add_candidate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Add_election</servlet-name>
+        <servlet-class>Online_Election_System.Add_election</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Getimage</servlet-name>
+        <servlet-class>Online_Election_System.Getimage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>User_register</servlet-name>
+        <servlet-class>Online_Election_System.User_register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Add_candidate</servlet-name>
+        <url-pattern>/Add_candidate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Add_election</servlet-name>
+        <url-pattern>/Add_election</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Getimage</servlet-name>
+        <url-pattern>/Getimage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>User_register</servlet-name>
+        <url-pattern>/User_register</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsf</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
